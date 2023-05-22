@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back2"
+    tools:context=".DetailMedicineActivity">
+
+    <TextView
+        android:id="@+id/titleDMTName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="14dp"
+        android:text="+ Healthcare +"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/titleDMTitle"
+        app:layout_constraintEnd_toEndOf="@+id/titleDMTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleDMPackageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="20dp"
+        android:text="Lab Test  Packages"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/EditTextMultiline"
+        app:layout_constraintStart_toStartOf="@+id/titleDMTitle"
+        app:layout_constraintTop_toBottomOf="@+id/titleDMTitle" />
+
+    <TextView
+        android:id="@+id/titleDMTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="Delivery Location : BBSR"
+        android:textColor="#fff777"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/titleDMPackageName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleDMTName" />
+
+    <ListView
+        android:id="@+id/DMList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDMTotalCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleDMPackageName" />
+
+    <Button
+        android:id="@+id/buttonDMBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="29dp"
+        android:text="BACK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/buttonDMGotoCart"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDMGotoCart" />
+
+    <Button
+        android:id="@+id/buttonDMGotoCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Add to cart"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDMBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDMTotalCost" />
+
+    <TextView
+        android:id="@+id/textViewDMTotalCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="40dp"
+        android:hint="Total Cost"
+        android:textColor="#FFEB3B"
+        android:textColorHint="#FFEB3B"
+        app:layout_constraintBottom_toTopOf="@+id/buttonDMGotoCart"
+        app:layout_constraintStart_toStartOf="@+id/buttonDMGotoCart"
+        app:layout_constraintTop_toBottomOf="@+id/EditTextMultiline" />
+
+    <EditText
+        android:id="@+id/EditTextMultiline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="5dp"
+        android:editable="false"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Hi\n Hello"
+        android:inputType="textMultiLine"
+        android:textColor="#FFEB3B"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDMTotalCost"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleDMPackageName"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
